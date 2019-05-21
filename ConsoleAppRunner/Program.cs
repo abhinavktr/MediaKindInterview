@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algorithms
+namespace ConsoleAppRunner
 {
-    public class Sudoku
+    class Program
     {
-        public bool Validate(int[][] input)
+        static void Main(string[] args)
         {
-
-            return true;
         }
     }
 }
