@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MergeArrays.cs" />
     <Compile Include="Sudoku.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
