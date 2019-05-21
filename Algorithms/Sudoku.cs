@@ -8,9 +8,11 @@ namespace Algorithms
 {
     public class Sudoku
     {
-        public bool Validate(int[][] input)
+        public bool Validate(int[,] input)
         {
-
+            //validate row
+            //validate columns
+            //validate 3*3 mtrix
             return true;
         }
     }
