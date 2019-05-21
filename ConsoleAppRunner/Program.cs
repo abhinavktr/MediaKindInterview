@@ -11,7 +11,7 @@ namespace ConsoleAppRunner
     {
         static void Main(string[] args)
         {
-            int[,] sudoku_data = new int[,]
+            int[,] sudoku_data_valid = new int[,]
             {
                 {5, 3, 4, 6, 7, 8, 9, 1, 2 },
                 { 6, 7, 2, 1, 9, 5, 3, 4, 8 },
@@ -23,8 +23,8 @@ namespace ConsoleAppRunner
                 { 2, 8, 7, 4, 1, 9, 6, 3, 5 },
                 { 3, 4, 5, 0, 8, 6, 1, 0, 0 }
             };
-            Sudoku sudoku = new Sudoku();
-            sudoku.Validate(sudoku_data);
+           Sudoku sudoku = new Sudoku();
+           var result = sudoku.Validate(sudoku_data_valid);
 
         }
     }
