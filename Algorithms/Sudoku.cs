@@ -45,5 +45,13 @@ namespace Algorithms
             //validate 3*3 mtrix
             return true;
         }
+
+        //Using backtacking approach
+        public bool Solve(int[,] input)
+        {
+
+            return true;
+
+        }
     }
 }
