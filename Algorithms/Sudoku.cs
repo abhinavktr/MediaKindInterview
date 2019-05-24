@@ -49,9 +49,37 @@ namespace Algorithms
         //Using backtacking approach
         public bool Solve(int[,] input)
         {
-
-            return true;
-
+            bool isEmpty = true;
+            int row = -1, col = -1;
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    if (input[i, j] == 0)
+                    {
+                        row = i;
+                        col = j;
+                        isEmpty = false;
+                    }
+                }
+                if (!isEmpty) break;
+            }
+            for (int num = 1; num <= 9; num++)
+            {
+                if (Validate(input))
+                {
+                    input[row, col] = num;
+                    if (Solve(input))
+                    {                        
+                        return true;
+                    }
+                    else
+                    {
+                        input[row, col] = 0; // replace it 
+                    }
+                }
+            }
+            return false;
         }
     }
 }

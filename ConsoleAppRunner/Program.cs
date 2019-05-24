@@ -11,8 +11,13 @@ namespace ConsoleAppRunner
     {
         static void Main(string[] args)
         {
+            Sudoku();
+        }
+
+        private static void MergeTwoSortedArray()
+        {
             int[] ar1 = new int[4] { 2, 4, 20, 90 };
-            int[] ar2 = new int[5] { 1, 3, 5,6,10 };
+            int[] ar2 = new int[5] { 1, 3, 5, 6, 10 };
             MergeArrays mergeArrays = new MergeArrays();
             mergeArrays.Merge(ar1, ar2);
         }
@@ -33,6 +38,7 @@ namespace ConsoleAppRunner
                         };
             Sudoku sudoku = new Sudoku();
             var result = sudoku.Validate(sudoku_data_valid);
+            var result1 = sudoku.Solve(sudoku_data_valid);
         }
     }
 }
