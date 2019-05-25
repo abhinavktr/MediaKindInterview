@@ -11,7 +11,26 @@ namespace ConsoleAppRunner
     {
         static void Main(string[] args)
         {
-            Sudoku();
+            BinaryTree tree = new BinaryTree();
+            tree.root = new Node(1);
+            tree.root.left = new Node(2);
+            tree.root.right = new Node(3);
+            tree.root.left.left = new Node(4);
+            tree.root.left.right = new Node(5);
+
+            BinaryTree tree2 = new BinaryTree();
+            tree2.root = new Node(2);
+            tree2.root.left = new Node(4);
+            tree2.root.left.right = new Node(6);
+            tree2.root.right = new Node(5);
+            tree2.root.right.left = new Node(8);
+            tree2.root.right.right = new Node(9);
+
+            var result = new BinaryTree();
+            //result.inorder(tree.root);
+            //result.preorder(tree.root);
+            //result.postorder(tree.root);
+            result.MergeTree(tree.root, tree2.root);
         }
 
         private static void MergeTwoSortedArray()
