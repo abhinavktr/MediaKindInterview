@@ -19,7 +19,7 @@ namespace Algorithms
             list.Add(node.value);
             inorder(node.right);
         }
-
+       // current = (struct Node*)((ut) prev ^ (ut) current ^ (ut) (current->next) ^ (ut) (current->next = prev) ^ (ut) (prev = current)); 
         public void preorder(Node node)
         {
             if (node == null)

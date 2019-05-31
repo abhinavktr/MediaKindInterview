@@ -11,6 +11,19 @@ namespace ConsoleAppRunner
     {
         static void Main(string[] args)
         {
+          var hashSet = new Algorithms.HashSet<int>(8);
+            hashSet.Add(3);
+            hashSet.Add(5);
+            hashSet.Add(6);
+
+            var hashSet1 = new Algorithms.HashSet<string>(8);
+            hashSet1.Add("abhi");
+            hashSet1.Add("nav");
+            hashSet1.Add("ibha");
+        }
+
+        private static void Trres()
+        {
             BinaryTree tree = new BinaryTree();
             tree.root = new Node(1);
             tree.root.left = new Node(2);
