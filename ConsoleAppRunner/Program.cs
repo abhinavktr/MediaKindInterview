@@ -11,7 +11,12 @@ namespace ConsoleAppRunner
     {
         static void Main(string[] args)
         {
-          var hashSet = new Algorithms.HashSet<int>(8);
+            
+        }
+
+        private static void HashSet()
+        {
+            var hashSet = new Algorithms.HashSet<int>(8);
             hashSet.Add(3);
             hashSet.Add(5);
             hashSet.Add(6);
@@ -22,7 +27,7 @@ namespace ConsoleAppRunner
             hashSet1.Add("ibha");
         }
 
-        private static void Trres()
+        private static void Trees()
         {
             BinaryTree tree = new BinaryTree();
             tree.root = new Node(1);
@@ -30,6 +35,8 @@ namespace ConsoleAppRunner
             tree.root.right = new Node(3);
             tree.root.left.left = new Node(4);
             tree.root.left.right = new Node(5);
+
+           var size = BinaryTree.TreeSize1(tree.root);
 
             BinaryTree tree2 = new BinaryTree();
             tree2.root = new Node(2);

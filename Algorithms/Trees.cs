@@ -51,7 +51,20 @@ namespace Algorithms
             firstRoot.right = MergeTree(firstRoot.right, secondRoot.right);
             return firstRoot;
         }
+
+        public static int TreeSize1(Node root)
+        {
+            if (root == null)
+                return 0;
+            if (root.left == null && root.right == null)
+                return 1;
+            int ls = TreeSize1(root.left);
+            int rs = TreeSize1(root.right);
+            return ls + rs + 1;
+        }
     }
+
+   
 
     public class Node
     {
