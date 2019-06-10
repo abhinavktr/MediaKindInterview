@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="HashSet.cs" />
     <Compile Include="HashTable.cs" />
+    <Compile Include="LevelSumTrees.cs" />
     <Compile Include="LinkedLists.cs" />
     <Compile Include="MergeArrays.cs" />
     <Compile Include="QuickSort.cs" />

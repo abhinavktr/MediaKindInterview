@@ -62,6 +62,18 @@ namespace Algorithms
             int rs = TreeSize1(root.right);
             return ls + rs + 1;
         }
+
+        public bool DFS(Node root)
+        {
+            //this is nothing but Inorder\Pre and post order traversal
+            return true;
+        }
+
+        public bool BFS(Node root)
+        {
+            //check level sum tress solution using Q
+            return true;
+        }
     }
 
    

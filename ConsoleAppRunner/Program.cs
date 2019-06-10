@@ -11,7 +11,12 @@ namespace ConsoleAppRunner
     {
         static void Main(string[] args)
         {
-           int volume = RainningDropsCollection.Trap(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 });
+            Trees();
+        }
+
+        private static void RainDropTrap()
+        {
+            int volume = RainningDropsCollection.Trap(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 });
         }
 
         private static void HashSet()
@@ -36,6 +41,7 @@ namespace ConsoleAppRunner
             tree.root.left.left = new Node(4);
             tree.root.left.right = new Node(5);
 
+           LevelSumTrees.LevelSum(tree.root);
            var size = BinaryTree.TreeSize1(tree.root);
 
             BinaryTree tree2 = new BinaryTree();
