@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DP-CoinChange.cs" />
     <Compile Include="HashSet.cs" />
     <Compile Include="HashTable.cs" />
     <Compile Include="LevelSumTrees.cs" />

@@ -11,7 +11,15 @@ namespace ConsoleAppRunner
     {
         static void Main(string[] args)
         {
-            Trees();
+           var cache = DP_CoinChange.BuildAllPossibleCache(new int[3] { 1, 2, 3 }, 4);
+        }
+
+        public int FindNumberOfPalindromes(string input)
+        {
+            int noOfPalindrome = 0;
+            //check whether palindormes can be made or not 
+
+            return noOfPalindrome;
         }
 
         private static void RainDropTrap()

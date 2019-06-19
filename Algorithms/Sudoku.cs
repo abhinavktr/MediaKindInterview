@@ -46,6 +46,15 @@ namespace Algorithms
             return true;
         }
 
+        public bool ValidateBox(int rowIndex,int colIndex)
+        {
+            //get the row index
+            var rowlimit = Math.Floor((decimal)rowIndex / 3) * 3;
+            var colLimit = Math.Floor((decimal)colIndex / 3) * 3;
+            
+            return true;
+        }
+
         //Using backtacking approach
         public bool Solve(int[,] input)
         {
