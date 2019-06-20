@@ -11,6 +11,7 @@ namespace Algorithms
         //Problem: Get min no of coins, also the denomination to get a change for a particular sum\capacity
 
         //Build the cache(2D array) with min number of coins required 
+        //TODO: Get the denomintations also with min coins
         public static int[,] BuildAllPossibleCache(int[] denominations, int capacity)
         {
             int[,] mem = new int[denominations.Length+1, capacity+1];
@@ -18,7 +19,6 @@ namespace Algorithms
             {
                 mem[0, i] = i;
             }
-
             for (int i = 1; i < denominations.Length + 1; i++)
             {
                 for (int j = 1; j < capacity+1 ; j++)

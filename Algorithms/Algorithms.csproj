@@ -47,6 +47,7 @@
     <Compile Include="LevelSumTrees.cs" />
     <Compile Include="LinkedLists.cs" />
     <Compile Include="MergeArrays.cs" />
+    <Compile Include="TreeTraversal.cs" />
     <Compile Include="QuickSort.cs" />
     <Compile Include="RainningDropsCollection.cs" />
     <Compile Include="Sudoku.cs" />

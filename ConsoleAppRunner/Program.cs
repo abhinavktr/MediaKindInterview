@@ -1,4 +1,5 @@
 ﻿using Algorithms;
+using DOTNETBASICS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,43 @@ namespace ConsoleAppRunner
     {
         static void Main(string[] args)
         {
-           var cache = DP_CoinChange.BuildAllPossibleCache(new int[3] { 1, 2, 3 }, 4);
+            BinaryTree tree = new BinaryTree();
+            tree.root = new Node(1);
+            tree.root.left = new Node(2);
+            tree.root.right = new Node(3);
+            tree.root.left.left = new Node(4);
+            tree.root.left.right = new Node(5);
+
+            TreeTraversal treeTraversal = new TreeTraversal();
+            treeTraversal.InOrderIterative(tree.root);
+            treeTraversal.InOrderRecursive(tree.root);
+        }
+
+        private static void AsyncSamples()
+        {
+            //try
+            //{
+
+            //    Task task = new Task(
+            //     () => {
+            //         throw new Exception("ff");
+            //     }
+            //           );
+            //    task.Start();
+
+            //    task.GetAwaiter().GetResult();
+            //}
+            //catch
+            //{
+            //    Console.WriteLine("Exception");
+            //}
+            AsyncAwaitExceptionHandling obj = new AsyncAwaitExceptionHandling();
+            obj.MainTaskAsync();
+        }
+
+        private static void CoinChange()
+        {
+            var cache = DP_CoinChange.BuildAllPossibleCache(new int[3] { 1, 2, 3 }, 4);
         }
 
         public int FindNumberOfPalindromes(string input)
