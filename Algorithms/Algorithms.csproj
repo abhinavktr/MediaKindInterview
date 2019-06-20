@@ -44,6 +44,7 @@
     <Compile Include="DP-CoinChange.cs" />
     <Compile Include="HashSet.cs" />
     <Compile Include="HashTable.cs" />
+    <Compile Include="KnapSack01_DP.cs" />
     <Compile Include="LevelSumTrees.cs" />
     <Compile Include="LinkedLists.cs" />
     <Compile Include="ManikInterview\BinarySearchSample.cs" />
