@@ -11,7 +11,7 @@ namespace ConsoleAppRunner
     class Program
     {
         static void Main(string[] args)
-        {
+        {            
             BinaryTree tree = new BinaryTree();
             tree.root = new Node(1);
             tree.root.left = new Node(2);
@@ -19,9 +19,23 @@ namespace ConsoleAppRunner
             tree.root.left.left = new Node(4);
             tree.root.left.right = new Node(5);
 
-            TreeTraversal treeTraversal = new TreeTraversal();
+            
+             TreeTraversal treeTraversal = new TreeTraversal();
+            treeTraversal.FindLeastCommonAncestor(tree.root, 5, 4);
             treeTraversal.InOrderIterative(tree.root);
             treeTraversal.InOrderRecursive(tree.root);
+        }
+
+     
+        public static void ConvertNumberToBinary(int n)
+        {
+            while(n > 0)
+            {
+                var v = n % 2;
+                Console.WriteLine(v);            
+                n = n / 2;
+            }
+            Console.Read();
         }
 
         private static void AsyncSamples()
