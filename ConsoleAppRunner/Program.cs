@@ -11,7 +11,82 @@ namespace ConsoleAppRunner
     class Program
     {
         static void Main(string[] args)
-        {            
+        {
+            //Console.WriteLine("Please enter string for permutation:");
+            string input = "ABC";
+            //Console.ReadLine();
+
+           // functPermut("ABC");
+
+            //String str = "ABC";
+            //int n = str.Length;
+            //permute(str, 0, n - 1);
+
+            int value = factorial(5);
+            //5 * 4 * 3 * 2
+
+        }
+
+        private static int factorial(int number)
+        {
+            if (number <= 1) return number;
+
+            return number * factorial(number - 1);
+        }
+
+      
+        static List<string> strOutput = new List<string>();
+        public  static string functPermut(string input)
+        {
+            int length = input.Length;
+            if (length == 0) return ""; // empty, no more char available
+            if (length == 1) return input; // if a single char no need to permutate further
+
+            for (int i = 0; i < length - 1; i++)
+            {
+                char current = input[i];
+                string remainingLetter = input.Substring(i + 1, length - 1);
+                for (int j = 0; j < remainingLetter.Length - 1; j++)
+                {
+                    strOutput.Add(current + functPermut(remainingLetter));
+                }
+            }
+
+            return input;
+        }
+
+
+
+
+        
+     
+
+       
+    
+
+    // This code is contributed by mits
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    private static void TreeTraversaltest()
+        {
             BinaryTree tree = new BinaryTree();
             tree.root = new Node(1);
             tree.root.left = new Node(2);
@@ -19,14 +94,13 @@ namespace ConsoleAppRunner
             tree.root.left.left = new Node(4);
             tree.root.left.right = new Node(5);
 
-            
-             TreeTraversal treeTraversal = new TreeTraversal();
+
+            TreeTraversal treeTraversal = new TreeTraversal();
             treeTraversal.FindLeastCommonAncestor(tree.root, 5, 4);
             treeTraversal.InOrderIterative(tree.root);
             treeTraversal.InOrderRecursive(tree.root);
         }
 
-     
         public static void ConvertNumberToBinary(int n)
         {
             while(n > 0)
